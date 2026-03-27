@@ -1,0 +1,60 @@
+/* 1. Estilo general del cuerpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto; /* Esto centra todo el contenido */
+    padding: 20px;
+    background-color: #a1e3ee;
+}
+
+/* 2. Estilo de los títulos */
+h1, h2 {
+    color: #067aed;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+/* 3. Haz que la tabla se vea profesional */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Quita el espacio doble entre bordes */
+    margin: 20px 0;
+    background: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+/* 4. Dale estilo al Formulario */
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: white;
+}
+
+button {
+    background-color: #3bb141;
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px; 
+}
+
+button:hover {
+    background-color: #173323; /* Cambia de color al pasar el mouse */
+}
