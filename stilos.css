@@ -6,7 +6,7 @@ body {
     max-width: 800px;
     margin: 0 auto; /* Esto centra todo el contenido */
     padding: 20px;
-    background-color: #a1e3ee;
+    background-color: #c5e9ef;
 }
 
 /* 2. Estilo de los títulos */
@@ -29,6 +29,15 @@ th, td {
     border: 1px solid #ddd;
 }
 
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tbody tr:hover {
+    background-color: #d1ecf1; 
+    transition: 0.3s;
+} 
+
+
 th {
     background-color: #3498db;
     color: white;
@@ -44,7 +53,7 @@ fieldset {
 }
 
 button {
-    background-color: #3bb141;
+    background-color: #10e722;
     cursor: pointer;
     border: none;
     color: white;
@@ -55,6 +64,8 @@ button {
     border-radius: 12px; 
 }
 
+
+
 button:hover {
-    background-color: #173323; /* Cambia de color al pasar el mouse */
+    background-color: #2ada76; /* Cambia de color al pasar el mouse */
 }
