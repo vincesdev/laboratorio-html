@@ -1,7 +1,8 @@
 /* 1. Estilo general del cuerpo */
 body {
     font-family: 'Poppins', sans-serif; /* La fuente de Google */
-    background-color: #f4f7f6;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-attachment: fixed; /* El fondo se queda quieto mientras haces scroll */
     color: #2c3e50;
     max-width: 1000px; /* Lo ensanchamos un poco para que quepan ambos */
     margin: 0 auto;
@@ -124,21 +125,23 @@ fieldset {
 
 
 button {
-    background-color: #10e722;
-    cursor: pointer;
+    /* Degradado de verde esmeralda a verde lima */
+    background: linear-gradient(to right, #11998e, #38ef7d);
     border: none;
     color: white;
     padding: 16px 32px;
-    font-size: 24px;
-    font-weight: bold;
-    position: relative;
-    border-radius: 12px; 
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 50px; /* Bordes totalmente redondeados (estilo píldora) */
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(56, 239, 125, 0.3);
+    transition: all 0.3s ease;
 }
 
-
-
 button:hover {
-    background-color: #2ada76; /* Cambia de color al pasar el mouse */
+    /* Al pasar el mouse, el degradado se invierte o brilla más */
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(56, 239, 125, 0.4); /*pasar el mouse */
 }
 
 /* 1. Hacer que la imagen tenga un borde redondeado y sombra */
