@@ -1,12 +1,25 @@
 /* 1. Estilo general del cuerpo */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto; /* Esto centra todo el contenido */
+    font-family: 'Poppins', sans-serif; /* La fuente de Google */
+    background-color: #f4f7f6;
+    color: #2c3e50;
+    max-width: 1000px; /* Lo ensanchamos un poco para que quepan ambos */
+    margin: 0 auto;
     padding: 20px;
-    background-color: #c5e9ef;
+}
+.contenedor-flex {
+    display: flex;
+    flex-direction: row;      /* Poner en fila */
+    flex-wrap: wrap;          /* Si es un celular, que la imagen baje */
+    justify-content: space-around; /* Reparte el espacio entre ellos */
+    align-items: center;      /* Los alinea al centro verticalmente */
+    gap: 30px;                /* Espacio de separación */
+    margin-top: 30px;
+}
+figure {
+    margin: 0;
+    flex: 1;                 /* Hace que intenten ocupar el mismo espacio */
+    min-width: 300px;        /* Pero que no se hagan más chiquitos de 300px */
 }
 
 /* 2. Estilo de los títulos */
@@ -45,11 +58,16 @@ th {
 
 /* 4. Dale estilo al Formulario */
 fieldset {
-    border: 1px solid #ddd;
+    display: block;
+    border: 1px solid #a42f2f;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
     background: white;
+}
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 button {
@@ -68,4 +86,27 @@ button {
 
 button:hover {
     background-color: #2ada76; /* Cambia de color al pasar el mouse */
+}
+
+/* 1. Hacer que la imagen tenga un borde redondeado y sombra */
+img {
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; /* Preparamos la transición */
+}
+
+/* 2. Efecto de "Levantamiento" al pasar el mouse por la imagen */
+img:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* 3. Una animación para el título H1 */
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    animation: aparecer 1s ease-out;
 }
