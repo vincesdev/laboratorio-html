@@ -7,6 +7,15 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+
+:root{
+    --color-primario: #3498db;
+    --color-secundario: #2ecc71;
+    --color-oscuro: #2c3e50;
+    --fuente-principal: 'Poppins', sans-serif;
+    --sombra-suave: 0 4px 15px rgba(0,0,0,0.1);
+}
+
 .contenedor-flex {
     display: flex;
     flex-direction: row;      /* Poner en fila */
@@ -24,8 +33,9 @@ figure {
 
 /* 2. Estilo de los títulos */
 h1, h2 {
-    color: #067aed;
-    border-bottom: 2px solid #ecf0f1;
+    color: var(--color-primario);
+    border-bottom: 2px solid var(--color-oscuro);
+    font-family: var(--fuente-principal);
 }
 
 /* 3. Haz que la tabla se vea profesional */
@@ -64,11 +74,54 @@ fieldset {
     padding: 20px;
     margin-bottom: 20px;
     background: white;
+    box-shadow: var(--sombra-suave);
 }
-img {
-    max-width: 100%;
-    height: auto;
+
+/* 1. El contenedor de las tarjetas */
+.contenedor-tarjetas {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Para que en el celular se pongan una abajo de otra */
+    margin-top: 20px;
 }
+
+/* 2. Diseño de cada tarjeta */
+.tarjeta {
+    flex: 1;
+    min-width: 250px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    border-top: 5px solid #3498db; /* Una línea de color arriba */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* 3. El número de la tarjeta (el span) */
+.tarjeta span {
+    font-size: 40px;
+    font-weight: bold;
+    color: rgba(52, 152, 219, 0.1); /* Color muy clarito */
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+/* 4. Efecto al pasar el mouse */
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    border-top-color: #e74c3c; /* Cambia de azul a rojo al tocarla */
+}
+
+.tarjeta p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+
 
 button {
     background-color: #10e722;
@@ -91,15 +144,23 @@ button:hover {
 /* 1. Hacer que la imagen tenga un borde redondeado y sombra */
 img {
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(169, 243, 22, 0.1);
     transition: transform 0.3s ease; /* Preparamos la transición */
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(30%); /* Un toque vintage */
+    transition: filter 0.3s ease;
 }
+
 
 /* 2. Efecto de "Levantamiento" al pasar el mouse por la imagen */
 img:hover {
     transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 30px rgba(241, 3, 3, 0.2);
+    filter: grayscale(0%); /* Vuelve al color total al pasar el mouse */
 }
+
+
 
 /* 3. Una animación para el título H1 */
 @keyframes aparecer {
