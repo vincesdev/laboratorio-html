@@ -26,15 +26,26 @@
     </ul>
 </section>
 
- <section>
-    <h2>Datos curiosos</h2>
 
-    <ol>
-        <li>Aunque se les asocia con Francia, su origen real es alemán, donde eran usados como perros cobradores de agua.</li>
-        <li>Es la segunda raza más <strong>inteligente</strong> del mundo, solo después del Border Collie.</li>
-        <li><strong>Su pelo no se cae</strong>, lo que los hace ideales para personas con alergias.</li>
-    </ol>
- </section> 
+<section>
+    <h2>Datos curiosos</h2>
+    <div class="contenedor-tarjetas">
+        <div class="tarjeta">
+            <span>01</span>
+            <p>Aunque se les asocia con Francia, su origen real es alemán, donde eran usados como perros cobradores de agua.</p>
+        </div>
+        <div class="tarjeta">
+            <span>02</span>
+            <p>Es la segunda raza más <strong>inteligente</strong> del mundo, solo después del Border Collie.</p>
+        </div>
+        <div class="tarjeta">
+            <span>03</span>
+            <p><strong>Su pelo no se cae</strong>, lo que los hace ideales para personas con alergias.</p>
+        </div>
+    </div>
+</section>
+    
+
 
 <section> 
   <h2>Comparativas de tamaño de poodle</h2>
@@ -93,7 +104,7 @@
                 <legend>Información del Poodle</legend>
 
             <label for="nombre">Nombre del Poodle</label>
-            <input type="text" id="nombre" name="nombre" placeholder="ej:Copito" required>
+            <input type="text" id="nombre" name="nombre" placeholder="ej:Copito">
             <br><br>
             <label for="variedad">Variedad de poodle</label>
             <select id="variedad" name="variedad" required>
@@ -117,6 +128,13 @@
             <br><br>
 
             <button type="submit">Reservar cita</button>
+            <div id="mensaje-confirmacion" class="mensaje-oculto">
+                <p>¡Felicidades Brigitte!</p>
+                <p>La cita de <span id="nombre-confirmacion"></span></p>
+                <p>Variedad: <span id="variedad-confirmacion"></span></p>
+                <p>Edad: <span id="edad-confirmacion"></span> años.</p>
+                <p>ha sido reservada con éxito. 🐩</p>
+            </div>
 
         </form>
 
@@ -127,6 +145,7 @@
 
     <a href="https://purina.com.pe/purina/perros/que-sabes-de-los-perros-poodle" target="_blank">Enciclopedia de razas</a>
 </footer> 
-   
+
+   <script src="script.js"></script>
 </body>
 </html>
