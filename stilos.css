@@ -150,7 +150,7 @@ button:hover {
 
 /* Estilo base para el mensaje */
 #mensaje-confirmacion {
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 15px;
     border-radius: 10px;
     display: none; /* Al principio no se ve */
@@ -169,7 +169,7 @@ button:hover {
 }
 
 /* 1. Hacer que la imagen tenga un borde redondeado y sombra */
-img {
+.img {
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(169, 243, 22, 0.1);
     transition: transform 0.3s ease; /* Preparamos la transición */
@@ -177,6 +177,7 @@ img {
     height: auto;
     filter: grayscale(30%); /* Un toque vintage */
     transition: filter 0.3s ease;
+   
 }
 
 
@@ -187,6 +188,9 @@ img:hover {
     filter: grayscale(0%); /* Vuelve al color total al pasar el mouse */
 }
 
+#poodle-dinamico {
+    transition: opacity 0.4s ease-in-out;
+}
 
 
 /* 3. Una animación para el título H1 */
